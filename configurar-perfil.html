@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alterar Perfil</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Kanit:wght@100..900&family=Rubik:wght@300..900&family=Montserrat:wght@100..900&family=DM+Sans:wght@100..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<script>
+  dia = new Array ("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
+  mes = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+  data = new Date
+</script>
+
+<style>
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --accent: #069cb3;
+  --text: #333;
+  --muted: #6c6f8a;
+  --input-border: #e7e9f2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CARD CENTRAL */
+.card {
+  width: 100%;
+  max-width: 700px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 20px 30px;
+    margin-top: 40px;
+}
+
+/* TOPO */
+.top-profile {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* AVATAR */
+.avatar-wrapper {
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+}
+
+/* BOTÃO EDITAR */
+.edit-avatar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--accent);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  border: 2px solid white;
+}
+
+/* TÍTULO */
+.title {
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+/* NOME */
+.username {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* FORM */
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+    margin-top: 40px; 
+}
+
+/* LINHAS */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.col {
+  flex: 1;
+}
+
+/* INPUTS */
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BOTÕES */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-ghost {
+  border: 1px solid #ccc;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* RESPONSIVO */
+@media(max-width:600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Botão de seta no canto superior esquerdo na tela de projetos */
+.back-button {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid #069cb3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+    text-decoration: none;
+  
+}
+
+.back-button:hover {
+  background-color: #c1efffa3;
+  transform: scale(1.1);
+    text-decoration: none;
+}
+
+.back-button i {
+  color: #069cb3;
+  text-decoration: none;
+  /* amarelo (pode trocar para qualquer cor ex: #ff0000) */
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- Botão de voltar -->
+  <a href="index.html" class="back-button">
+    <i class="fas fa-circle-arrow-left"></i>
+  </a>
+
+
+
+
+  
+<main class="card">
+
+    <p style="text-align: right; margin-right: 10px; margin-top: 30px; font-size: 14px; color: #069cb3;font-weight: 500;">
+  <script type="text/javascript">
+    document.write (dia[data.getDay()] + ", " + data.getDate() + " de " + mes[data.getMonth()] + " de " + data.getFullYear())
+  </script>
+</p>
+
+  <!-- TOPO -->
+  <div class="top-profile">
+
+    <div class="avatar-wrapper">
+      <div class="avatar" id="avatar">ME</div>
+      <div class="edit-avatar" onclick="document.getElementById('avatarFile').click()">✎</div>
+    </div>
+
+    <h2 class="title">Alterar Perfil</h2>
+    <div class="username" id="usernameDisplay">Maria Eduarda</div>
+
+  </div>
+
+  <!-- FORM -->
+  <form>
+
+    <div class="row">
+      <div class="col">
+        <label>Novo login</label>
+        <input type="text" id="newUsername" placeholder="maria.eduarda">
+      </div>
+
+      <div class="col">
+        <label>Novo e-mail</label>
+        <input type="email" placeholder="email@email.com">
+      </div>
+    </div>
+
+
+<div class="row">
+
+  <div class="col">
+
+    <label>Senha</label>
+
+    <input 
+      type="password" 
+      placeholder="********"
+    >
+
+  </div>
+
+  <div class="col">
+
+    <label>Confirmar senha</label>
+
+    <input 
+      type="password" 
+      placeholder="********"
+    >
+
+  </div>
+
+</div>
+
+
+
+    <div>
+      <label>Foto de perfil</label>
+      <input type="file" id="avatarFile" style="display:none;">
+    </div>
+
+    <div class="btn-row">
+      <a href="index.html"><button type="button" class="btn-ghost">Cancelar</button></a>
+      <button type="submit" class="btn-primary">Salvar</button>
+    </div>
+
+  </form>
+
+</main>
+
+<script>
+// ===== CONFIG =====
+const CURRENT_KEY = "userData";
+
+// pegar usuário
+let user = JSON.parse(localStorage.getItem(CURRENT_KEY)) || {
+  nome: "Maria Eduarda",
+  email: "email@email.com",
+  foto: null
+};
+
+let emailAntigo = user.email;
+
+// elementos
+const avatar = document.getElementById("avatar");
+const usernameDisplay = document.getElementById("usernameDisplay");
+const avatarFile = document.getElementById("avatarFile");
+const form = document.querySelector("form");
+const newUsername = document.getElementById("newUsername");
+const newEmail = document.querySelector("input[type='email']");
+
+// ===== INICIAL =====
+usernameDisplay.textContent = user.nome;
+newUsername.value = user.nome;
+newEmail.value = user.email;
+
+// avatar inicial
+if (user.foto) {
+  avatar.style.background = `url('${user.foto}') center/cover`;
+  avatar.textContent = "";
+} else {
+  avatar.textContent = user.nome.split(" ").map(n => n[0]).join("");
+}
+
+// ===== PREVIEW FOTO =====
+avatarFile.addEventListener("change", () => {
+  const file = avatarFile.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    avatar.style.background = `url('${reader.result}') center/cover`;
+    avatar.textContent = "";
+  };
+  reader.readAsDataURL(file);
+});
+
+// ===== ATUALIZA NOME EM TEMPO REAL =====
+newUsername.addEventListener("input", (e) => {
+  usernameDisplay.textContent = e.target.value || user.nome;
+});
+
+// ===== DATA FORMATADA =====
+function dataAtualBR() {
+  return new Date().toLocaleDateString("pt-BR", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+  });
+}
+
+// ===== SALVAR =====
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const novoNome = newUsername.value.trim();
+  const novoEmail = newEmail.value.trim();
+
+  if (!novoNome || !novoEmail) {
+    alert("Preencha todos os campos.");
+    return;
+  }
+
+  user.nome = novoNome;
+  user.email = novoEmail;
+  user.ultimaModificacao = dataAtualBR();
+
+  const file = avatarFile.files[0];
+
+  function salvarTudo() {
+    // salva usuário atual
+    localStorage.setItem(CURRENT_KEY, JSON.stringify(user));
+
+    // atualiza lista de usuários (se existir)
+    let allUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const index = allUsers.findIndex(u => u.email === emailAntigo);
+
+    if (index !== -1) {
+      allUsers[index] = user;
+      localStorage.setItem("users", JSON.stringify(allUsers));
+    }
+
+    // 🔥 REDIRECIONA
+    window.location.href = "index.html";
+  }
+
+  // se tiver nova foto
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      user.foto = reader.result;
+      salvarTudo();
+    };
+    reader.readAsDataURL(file);
+  } else {
+    salvarTudo();
+  }
+});
+</script>
+
+</body>
+</html>

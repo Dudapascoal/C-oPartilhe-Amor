@@ -1,0 +1,260 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#f6f3fb;
+}
+
+.section-title-1,
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: black;
+  position: relative;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+/* Linha abaixo do título */
+.section-title-1::after,
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background-color: #0097b2;
+  transition: width 0.3s ease;
+}
+
+/* Quando passa o mouse, a linha aparece maior */
+.section-title:hover::after,
+.section-title-1:hover::after {
+  width: 150px;
+}
+
+
+/* ===============================
+   PETS DISPONÍVEIS
+================================== */
+
+.pets-disponiveis{
+  width:100%;
+  padding:10px 40px 60px;
+}
+
+.pets-disponiveis h2{
+  font-size:32px;
+  color:#2d3f59;
+  margin-bottom:22px;
+  font-weight:700;
+}
+
+/* CENTRALIZAÇÃO DOS CARDS */
+
+.cards-pets{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* CARD */
+
+.pet-card{
+  width:360px;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.pet-card:hover{
+  transform:translateY(-5px);
+}
+
+/* IMAGEM */
+
+.pet-image{
+  width:100%;
+  overflow:hidden;
+}
+
+.pet-image img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+  transition:0.4s;
+}
+
+.pet-card:hover .pet-image img{
+  transform:scale(1.03);
+}
+
+/* CONTEÚDO */
+
+.pet-info{
+  padding:16px 14px 20px;
+}
+
+.pet-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.pet-top h3{
+  font-size:20px;
+  color:#2d3f59;
+  font-weight:500;
+}
+
+/* ÍCONES */
+
+.pet-icons{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.pet-icons i{
+  font-size:26px;
+  color:#ff37d7;
+}
+
+.pet-icons .male{
+  color:#003da6;
+}
+
+.pet-icons .fa-heart{
+  color:#ff4d6d;
+}
+
+/* LOCAL */
+
+.pet-location{
+  font-size:14px;
+  color:#6d7480;
+  margin-bottom:20px;
+  line-height:1.5;
+}
+
+/* BOTÃO */
+
+.pet-card button{
+  width:100%;
+  height:44px;
+  border:none;
+  border-radius:10px;
+  background:#069cb3;
+  color:#fff;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.pet-card button:hover{
+  opacity:0.9;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+  .cards-pets{
+    gap:40px;
+  }
+
+  .pet-card{
+    width:370px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .pets-disponiveis{
+    padding:10px 20px 50px;
+  }
+
+  .pets-disponiveis h2{
+    font-size:26px;
+  }
+
+  .cards-pets{
+    gap:28px;
+  }
+
+  .pet-card{
+    width:100%;
+    max-width:390px;
+  }
+
+  .pet-image img{
+    height:270px;
+  }
+
+  .pet-top h3{
+    font-size:18px;
+  }
+
+  .pet-icons i{
+    font-size:24px;
+  }
+
+}
+
+.pet-card button:hover{
+  opacity:0.9;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:600px){
+
+  .pets-disponiveis{
+    padding:10px 20px 50px;
+  }
+
+  .pets-disponiveis h2{
+    font-size:26px;
+  }
+
+  .pet-card{
+    width:100%;
+    max-width:360px;
+  }
+
+  .pet-image img{
+    height:260px;
+  }
+
+  .pet-top h3{
+    font-size:18px;
+  }
+
+}

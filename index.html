@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cãopartilhe Amor</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="left">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Logo DevCore" class="logo-img">
+      </a>
+      <div class="subtitulo-logo">
+        <h1>Cãopartilhe <span class="love">Amor</span></h1>
+        <p>Onde o amor encontra um lar</p>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="servicos.html">Serviços</a>
+
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn">
+          <span class="dropdown-text">Adoções</span>
+          <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+        </a>
+
+        <div class="dropdown-content">
+          <a href="aves.html">Aves</a>
+          <a href="dogs.html">Cães</a>
+          <a href="cats.html">Gatos</a>
+          <a href="roedores.html">Roedores</a>
+        </div>
+    </nav>
+
+    <div class="user-area">
+      <div class="profile-container" id="profileButton">
+        <!-- ÍCONE ORIGINAL -->
+        <i class="fa-solid fa-user-circle login-icon" id="profileIcon"></i>
+
+        <!-- NOME DO USUÁRIO (APARECE APÓS LOGIN) -->
+        <span id="profileName"></span>
+
+        <!-- SETINHA DO DROPDOWN (APARECE SOMENTE LOGADO) -->
+        <i class="fa-solid fa-caret-down" id="caretDropdown" style="display:none;"></i>
+      </div>
+
+      <!-- DROPDOWN -->
+      <div class="profile-dropdown" id="profileDropdown">
+        <a href="configurar-perfil.html">Configurar Perfil</a>
+        <a href="#" id="logoutBtn">Sair</a>
+      </div>
+    </div>
+  </header><br>
+
+  <!-- IMPORTA O JS DO HEADER -->
+  <script src="js/header.js"></script>
+
+
+
+  <main class="hero">
+    <div class="hero-text">
+      <h1>Porque todo Pet <br> merece<span> um Lar</span></h1>
+      <p>ONG dedicada ao resgate, e cuidado, onde nossa missão é oferecer proteção, carinho e uma nova chance para cada
+        pet, promovendo a adoção responsável e a conscientização sobre o bem-estar animal.</p>
+      <div class="buttons">
+        <button class="btn-primary"><a href="servicos.html" style="text-decoration: none; color: inherit;">Serviços</a></button>
+        <button class="btn-secondary"><a href="quem_somos.html" style="text-decoration: none; color: inherit;">Nossa História</a></button>
+      </div>
+
+      <div class="tags">
+        <span>Proteção Animal</span>
+        <span>Cuidados</span>
+        <span>Resgate</span>
+        <span class="highlight">Conscientização</span>
+
+      </div>
+
+
+      <div class="stats">
+        <h3>Nos ajude <span>a salvar + 1 Vida</span></h3>
+        <div class="avatars">
+          <img src="https://i.pravatar.cc/40?img=1" alt="">
+          <img src="https://i.pravatar.cc/40?img=2" alt="">
+          <img src="https://i.pravatar.cc/40?img=3" alt="">
+        </div>
+        <button class="join"><a href="login-cadastro.html" style="text-decoration: none; color: inherit;">Cadastre-se agora</a></button>
+      </div>
+    </div>
+
+    <div class="hero-images">
+      <div class="main-img">
+        <img src="img/banner1.jpg" alt="Equipe trabalhando">
+      </div>
+      <div class="side-imgs">
+        <img src="img/banner3.jpg" alt="Reunião de trabalho">
+        <img src="img/banner2.jpg" alt="Homem sorrindo com tablet">
+      </div>
+    </div>
+
+
+  </main>
+  <br>
+  <h2 class="section-title">Pets Categorias</h2>
+  <br>
+
+  <div class="wrapper">
+  <div class="container">
+
+    <div class="card dog">
+      <div class="img-box">
+        <img src="img/Cachorro.jpg" alt="Dog">
+      </div>
+      <h3>Cachorros</h3>
+      <p>Animais de diferentes portes e personalidades, prontos para um novo lar.</p>
+    </div>
+
+    <div class="card cat">
+      <div class="img-box">
+        <img src="img/Gato.jpg" alt="Cat">
+      </div>
+      <h3>Gatos</h3>
+      <p>Companheiros extremamente carinhosos e independentes.</p>
+    </div>
+
+    <div class="card fish">
+      <div class="img-box">
+        <img src="img/Filhotes.jpg">
+      </div>
+      <h3>Filhotes</h3>
+      <p>Pets jovens que ainda estão em fase de crescimento e adaptação.</p>
+    </div>
+
+    <div class="card bird">
+      <div class="img-box">
+        <img src="img/Aves.jpg">
+      </div>
+      <h3>Aves</h3>
+      <p>Animais leves e ativos, que trazem vida e movimento ao ambiente.</p>
+    </div>
+
+    <div class="card hamster">
+      <div class="img-box">
+        <img src="img/Roedores.jpg">
+      </div>
+      <h3>Roedores</h3>
+      <p>Pequenos companheiros curiosos, fáceis de manter no dia a dia.</p>
+    </div>
+
+  </div>
+</div>
+
+<br><br><br><br>
+
+<section class="banner">
+    <div class="banner__container">
+
+        <!-- TEXTO -->
+        <div class="banner__content">
+            <h1 class="banner__title">
+                Pegue um pequeno, <br>grande amigo
+            </h1>
+
+            <p class="banner__description">
+Adotar um pet é salvar uma vida e ganhar um companheiro fiel. Você oferece um lar e recebe carinho e companhia todos os dias.
+
+            </p>
+
+<a href="https://www.petz.com.br/blog/beneficios-de-adotar-um-pet/" class="banner__button" target="_blank">>
+    Saiba Mais
+</a>
+        </div>
+
+        <!-- IMAGEM -->
+    <div class="banner__media">
+
+    <img src="img/Cachorro.jpg" alt="dog" class="banner__image">
+
+    <!-- PATINHAS -->
+    <span class="paw paw--1">🐾</span>
+    <span class="paw paw--2">🐾</span>
+    <span class="paw paw--3">🐾</span>
+
+</div>
+
+    </div>
+
+
+</section>
+
+<div class="topbar">
+    <div class="item">
+        <i class="fas fa-map-marker-alt icon"></i>
+        <span>R. Boa Vista, 825 - Boa Vista, São Caetano do Sul</span>
+    </div>
+
+    <div class="item">
+        <i class="fas fa-phone-alt icon"></i>
+        <span>(11) 4002-8922</span>
+    </div>
+
+    <div class="item">
+        <i class="fas fa-envelope icon"></i>
+        <span>info@Caopartilheamor.com</span>
+    </div>
+</div>
+
+  <!-- CTA -->
+  <div class="cta">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8651725865325!2d-46.56120982488826!3d-23.644999078742394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4328c992748f%3A0xcea3c3e698444297!2sSENAI%20S%C3%A3o%20Caetano%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1776810518888!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <!-- Logo e título lado a lado -->
+        <div class="left-footer">
+          <a href="#" class="logo">
+            <img src="img/logo.png" alt="DevCore" class="logo-empresa" />
+          </a>
+
+          <div class="subtitulo-footer">
+            <h1>Cãopartilhe <span>Amor</span></h1>
+            <p>Onde o amor encontra um lar</p>
+          </div>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="social-links">
+          <a href="#" class="social-icon facebook">
+            <img src="img/facebook icon.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon instagram">
+            <img src="img/instagram icon.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon linkedin">
+            <img src="img/linkedin icon.png" alt="LinkedIn" />
+          </a>
+          <a href="#" class="social-icon linkedin">
+            <img src="img/twitter.jpg" alt="LinkedIn" />
+          </a>
+          <a href="#" class="social-icon tiktok">
+            <img src="img/wtt.png" alt="WhatsApp" />
+          </a>
+        </div>
+
+        <!-- Pagamentos -->
+        <div class="payment-methods">
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <h4>Assine nossa newsletter</h4>
+        <p>Seja o primeiro a encontrar novos bichinhos!</p>
+        <br />
+        <form action="#">
+          <input type="email" placeholder="Digite seu E-mail:" />
+          <button type="submit">Inscrever</button>
+        </form>
+        <br />
+        <p>
+          Ao se inscrever, você está aceitando nossa
+          <a href="#">Política de Privacidade</a>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-info">
+          <h4>Sobre:</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="aves.html">Adoções</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Meios de Contato:</h4>
+          <ul>
+            <li>Email: info@Caopartilheamor.com</li>
+            <li>WhatsApp: (11) 4002-8922</li>
+            <li>Central de atendimento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Cãopartilhe Amor | Desenvolvido por Maria Eduarda Moreira Pascoal |
+      Protegendo vidas, construindo lares.
+    </div>
+  </footer>
+
+</body>
+
+</html>

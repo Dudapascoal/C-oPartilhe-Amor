@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cãopartilhe Amor</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/adocoes.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+
+  <script src="js/modal.js" defer></script>
+    <script src="js/forms.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="left">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Logo DevCore" class="logo-img">
+      </a>
+      <div class="subtitulo-logo">
+        <h1>Cãopartilhe <span class="love">Amor</span></h1>
+        <p>Onde o amor encontra um lar</p>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+
+
+      <div class="dropdown">
+        <a href="#" class="active" class="dropbtn">
+          <span class="dropdown-text">Adoções</span>
+          <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+        </a>
+
+        <div class="dropdown-content">
+          <a href="aves.html">Aves</a>
+          <a href="dogs.html">Cães</a>
+          <a href="cats.html">Gatos</a>
+          <a href="roedores.html">Roedores</a>
+        </div>
+    </nav>
+
+    <div class="user-area">
+      <div class="profile-container" id="profileButton">
+        <!-- ÍCONE ORIGINAL -->
+        <i class="fa-solid fa-user-circle login-icon" id="profileIcon"></i>
+
+        <!-- NOME DO USUÁRIO (APARECE APÓS LOGIN) -->
+        <span id="profileName"></span>
+
+        <!-- SETINHA DO DROPDOWN (APARECE SOMENTE LOGADO) -->
+        <i class="fa-solid fa-caret-down" id="caretDropdown" style="display:none;"></i>
+      </div>
+
+      <!-- DROPDOWN -->
+      <div class="profile-dropdown" id="profileDropdown">
+        <a href="configurar-perfil.html">Configurar Perfil</a>
+        <a href="#" id="logoutBtn">Sair</a>
+      </div>
+    </div>
+  </header><br>
+
+  <!-- IMPORTA O JS DO HEADER -->
+  <script src="js/header.js"></script>
+
+
+  <br>
+  <h2 class="section-title">Pets Disponíveis</h2>
+
+
+
+<section class="pets-disponiveis">
+
+  <div class="cards-pets">
+
+    <!-- CARD 1 -->
+    <div class="pet-card"
+      data-img="Gatos/cat1.jpg"
+      data-nome="Mia"
+      data-genero="venus"
+      data-peso="4 kg"
+      data-idade="1 ano"
+      data-microchip="990000045781001"
+      data-especie="Gato"
+      data-porte="Pequeno"
+      data-raca="Siamês"
+      data-local="Petz Mooca, SÃO PAULO, SP"
+      data-sobre="Muito dócil, tranquila e adora ficar no colo. Ideal para ambientes calmos e famílias carinhosas.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat1.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Mia</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-venus"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Mooca, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="pet-card"
+      data-img="Gatos/cat2.jpg"
+      data-nome="Theo"
+      data-genero="mars"
+      data-peso="5 kg"
+      data-idade="8 meses"
+      data-microchip="990000013764995"
+      data-especie="Gato"
+      data-porte="Pequeno"
+      data-raca="SRD"
+      data-local="Petz Jacu Pêssego, SÃO PAULO, SP"
+      data-sobre="Muito brincalhão e curioso. Ama explorar a casa e receber atenção das pessoas.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat2.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Theo</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-mars male"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Jacu Pêssego, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="pet-card"
+      data-img="Gatos/cat3.jpg"
+      data-nome="Marshal e Lily"
+      data-genero="ambos"
+      data-peso="3 kg"
+      data-idade="8 meses"
+      data-microchip="990000013764996"
+      data-especie="Gatos"
+      data-porte="Pequeno"
+      data-raca="Vira-lata"
+      data-local="Petz Mooca, SÃO PAULO, SP"
+      data-sobre="Cheios de energia, amam brincar e receber carinho o dia inteiro.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat3.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Marshal e Lily</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-mars male"></i>
+            <i class="fa-solid fa-venus"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Mooca, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="pets-disponiveis">
+
+  <div class="cards-pets">
+
+    <!-- CARD 4 -->
+    <div class="pet-card"
+      data-img="Gatos/cat4.jpg"
+      data-nome="Amora"
+      data-genero="venus"
+      data-peso="4 kg"
+      data-idade="7 meses"
+      data-microchip="990000013764994"
+      data-especie="Gato"
+      data-porte="Pequeno"
+      data-raca="Maine Coon"
+      data-local="Petz Tatuapé, SÃO PAULO, SP"
+      data-sobre="Muito carinhosa e tranquila. Ama ficar perto das pessoas e descansar em lugares confortáveis.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat4.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Amora</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-venus"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Tatuapé, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="pet-card"
+      data-img="Gatos/cat5.jpg"
+      data-nome="Tom"
+      data-genero="mars"
+      data-peso="6 kg"
+      data-idade="1 ano"
+      data-microchip="990000013764995"
+      data-especie="Gato"
+      data-porte="Médio"
+      data-raca="Tabby"
+      data-local="Petz Anália Franco, SÃO PAULO, SP"
+      data-sobre="Muito sociável e inteligente. Adora brincar com bolinhas e explorar novos ambientes.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat5.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Tom</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-mars male"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Anália Franco, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="pet-card"
+      data-img="Gatos/cat6.jpg"
+      data-nome="Fred"
+      data-genero="mars"
+      data-peso="5 kg"
+      data-idade="10 meses"
+      data-microchip="990000013764996"
+      data-especie="Gato"
+      data-porte="Médio"
+      data-raca="Tigrado"
+      data-local="Petz Mooca, SÃO PAULO, SP"
+      data-sobre="Extremamente tranquilo e observador. Ama carinho e ambientes silenciosos.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat6.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Fred</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-mars male"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Mooca, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="pets-disponiveis">
+
+  <div class="cards-pets">
+
+    <!-- CARD 7 -->
+    <div class="pet-card"
+      data-img="Gatos/cat7.jpg"
+      data-nome="Nina"
+      data-genero="venus"
+      data-peso="4 kg"
+      data-idade="2 anos"
+      data-microchip="990000013764994"
+      data-especie="Gato"
+      data-porte="Pequeno"
+      data-raca="Bombay"
+      data-local="Petz Diadema, SÃO PAULO, SP"
+      data-sobre="Muito elegante e carinhosa. Ama ficar perto das pessoas e observar tudo ao redor.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat7.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Nina</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-venus"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Diadema, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="pet-card"
+      data-img="Gatos/cat8.jpg"
+      data-nome="Shadow"
+      data-genero="mars"
+      data-peso="5 kg"
+      data-idade="1 ano"
+      data-microchip="990000013764995"
+      data-especie="Gato"
+      data-porte="Pequeno"
+      data-raca="Persa"
+      data-local="Petz Jacu Pêssego, SÃO PAULO, SP"
+      data-sobre="Muito tranquilo e carinhoso. Gosta de ambientes calmos e aconchegantes.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat8.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Shadow</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-mars male"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Jacu Pêssego, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="pet-card"
+      data-img="Gatos/cat9.jpg"
+      data-nome="Caramelo"
+      data-genero="mars"
+      data-peso="6 kg"
+      data-idade="1 ano"
+      data-microchip="990000013764996"
+      data-especie="Gato"
+      data-porte="Médio"
+      data-raca="Laranja"
+      data-local="Petz Vila Prudente, SÃO PAULO, SP"
+      data-sobre="Muito brincalhão e companheiro. Ama atenção e carinho durante o dia inteiro.">
+
+      <div class="pet-image">
+        <img src="Gatos/cat9.jpg" alt="Pet para adoção">
+      </div>
+
+      <div class="pet-info">
+
+        <div class="pet-top">
+
+          <h3>Caramelo</h3>
+
+          <div class="pet-icons">
+            <i class="fa-solid fa-mars male"></i>
+          </div>
+
+        </div>
+
+        <p class="pet-location">
+          Petz Vila Prudente, SÃO PAULO, SP
+        </p>
+
+        <button>Saiba Mais ></button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- =========================================
+     MODAL PET DINÂMICO
+============================================= -->
+
+  <div class="modal-pet" id="modalPet">
+
+    <div class="modal-container">
+
+      <!-- FECHAR -->
+      <button class="close-modal" id="closeModal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- IMAGEM -->
+      <div class="modal-image">
+
+        <img src="" alt="Pet" id="modalImg">
+
+      </div>
+
+      <!-- INFORMAÇÕES -->
+      <div class="modal-info">
+
+        <!-- ONG -->
+        <span class="modal-ong" id="modalOng">
+        </span>
+
+        <!-- TOPO -->
+        <div class="modal-title">
+
+          <!-- NOME -->
+          <h2 id="modalNome"></h2>
+
+          <!-- ÍCONES -->
+          <div class="modal-icons">
+
+            <i id="modalGenero" class="">
+            </i>
+
+          </div>
+
+        </div>
+
+        <!-- GRID INFO -->
+        <div class="modal-grid">
+
+          <!-- PESO -->
+          <div class="info-box">
+
+            <span>Peso</span>
+
+            <strong id="modalPeso"></strong>
+
+          </div>
+
+          <!-- IDADE -->
+          <div class="info-box">
+
+            <span>Idade aproximada</span>
+
+            <strong id="modalIdade"></strong>
+
+          </div>
+
+          <!-- MICROCHIP -->
+          <div class="info-box full">
+
+            <span>Microchip</span>
+
+            <strong id="modalChip"></strong>
+
+          </div>
+
+          <!-- ESPÉCIE -->
+          <div class="info-box">
+
+            <span>Espécie</span>
+
+            <strong id="modalEspecie"></strong>
+
+          </div>
+
+          <!-- PORTE -->
+          <div class="info-box">
+
+            <span>Porte</span>
+
+            <strong id="modalPorte"></strong>
+
+          </div>
+
+          <!-- RAÇA -->
+          <div class="info-box full">
+
+            <span>Raça</span>
+
+            <strong id="modalRaca"></strong>
+
+          </div>
+
+          <!-- LOCAL -->
+          <div class="info-box full">
+
+            <span>Local</span>
+
+            <strong id="modalLocal"></strong>
+
+          </div>
+
+          <!-- SOBRE -->
+          <div class="info-box full">
+
+            <span>Sobre o pet</span>
+
+            <p id="modalSobre"></p>
+
+          </div>
+
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="modal-buttons">
+<button class="btn-adotar" id="abrirFormulario">
+  Quero adotar
+</button>
+
+         <div class="modal-adocao" id="modalAdocao">
+
+  <div class="formulario-adocao">
+
+    <button class="fechar-modal" id="fecharFormulario">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- ETAPAS -->
+    <div class="steps">
+
+      <div class="step active">1</div>
+      <span></span>
+
+      <div class="step">2</div>
+      <span></span>
+
+      <div class="step">3</div>
+      <span></span>
+
+      <div class="step">4</div>
+
+    </div>
+
+    <form id="formAdocao">
+
+  <!-- ETAPA 1 -->
+<div class="form-step active">
+
+  <div class="form-content">
+
+    <h2>Sua localização</h2>
+
+    <p>
+      Precisamos saber onde você mora para continuar.
+    </p>
+
+  </div>
+
+  <div class="input-group">
+
+    <select id="estado" required>
+
+      <option value="">Escolha o estado</option>
+
+      <option value="AC">Acre</option>
+      <option value="AL">Alagoas</option>
+      <option value="AP">Amapá</option>
+      <option value="AM">Amazonas</option>
+      <option value="BA">Bahia</option>
+      <option value="CE">Ceará</option>
+      <option value="DF">Distrito Federal</option>
+      <option value="ES">Espírito Santo</option>
+      <option value="GO">Goiás</option>
+      <option value="MA">Maranhão</option>
+      <option value="MT">Mato Grosso</option>
+      <option value="MS">Mato Grosso do Sul</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="PA">Pará</option>
+      <option value="PB">Paraíba</option>
+      <option value="PR">Paraná</option>
+      <option value="PE">Pernambuco</option>
+      <option value="PI">Piauí</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="RN">Rio Grande do Norte</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="RO">Rondônia</option>
+      <option value="RR">Roraima</option>
+      <option value="SC">Santa Catarina</option>
+      <option value="SP">São Paulo</option>
+      <option value="SE">Sergipe</option>
+      <option value="TO">Tocantins</option>
+
+    </select>
+
+  </div>
+
+  <div class="input-group">
+
+    <select id="cidade" required>
+
+      <option value="">Escolha a cidade</option>
+
+    </select>
+
+  </div>
+
+  <div class="form-buttons">
+
+    <button type="button" class="btn-continuar next">
+      Continuar
+    </button>
+
+  </div>
+
+</div>
+
+      <!-- ===================== -->
+      <!-- ETAPA 2 -->
+      <!-- ===================== -->
+
+      <div class="form-step">
+
+        <div class="form-content">
+
+          <h2>Seus dados</h2>
+
+          <p>
+            Conte um pouco sobre você.
+          </p>
+
+        </div>
+
+        <div class="input-group">
+          <input type="text" placeholder="Seu nome completo" required>
+        </div>
+
+        <div class="input-group">
+          <input type="email" placeholder="Seu e-mail" required>
+        </div>
+
+        <div class="input-group">
+          <input type="text" placeholder="Seu telefone" required>
+        </div>
+
+        <div class="input-group">
+          <input type="number" placeholder="Sua idade" required>
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-voltar prev">
+            Voltar
+          </button>
+
+          <button type="button" class="btn-continuar next">
+            Continuar
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ===================== -->
+      <!-- ETAPA 3 -->
+      <!-- ===================== -->
+
+      <div class="form-step">
+
+        <div class="form-content">
+
+          <h2>Sobre sua casa</h2>
+
+          <p>
+            Queremos conhecer o ambiente do pet.
+          </p>
+
+        </div>
+
+        <div class="input-group">
+
+          <select required>
+
+            <option value="">
+              Você mora em casa ou apartamento?
+            </option>
+
+            <option>Casa</option>
+            <option>Apartamento</option>
+
+          </select>
+
+        </div>
+
+        <div class="input-group">
+
+          <select required>
+
+            <option value="">
+              Possui quintal?
+            </option>
+
+            <option>Sim</option>
+            <option>Não</option>
+
+          </select>
+
+        </div>
+
+        <div class="input-group">
+
+          <select required>
+
+            <option value="">
+              Já teve pets antes?
+            </option>
+
+            <option>Sim</option>
+            <option>Não</option>
+
+          </select>
+
+        </div>
+
+        <div class="input-group">
+
+          <select required>
+
+            <option value="">
+              Tem outros animais em casa?
+            </option>
+
+            <option>Sim</option>
+            <option>Não</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-voltar prev">
+            Voltar
+          </button>
+
+          <button type="button" class="btn-continuar next">
+            Continuar
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ===================== -->
+      <!-- ETAPA 4 -->
+      <!-- ===================== -->
+
+      <div class="form-step">
+
+        <div class="form-content">
+
+          <h2>Finalizar adoção</h2>
+
+          <p>
+            Revise suas informações e envie sua solicitação para análise da ONG.
+          </p>
+
+        </div>
+
+        <div class="input-group">
+
+          <select required>
+
+            <option value="">
+              Você concorda com a adoção responsável?
+            </option>
+
+            <option>Sim, concordo</option>
+
+          </select>
+
+        </div>
+
+        <div class="input-group">
+          <input type="text" placeholder="Motivo da adoção">
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-voltar prev">
+            Voltar
+          </button>
+
+          <button type="submit" class="btn-continuar">
+            Enviar solicitação
+          </button>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <!-- Logo e título lado a lado -->
+        <div class="left-footer">
+          <a href="#" class="logo">
+            <img src="img/logo.png" alt="DevCore" class="logo-empresa" />
+          </a>
+
+          <div class="subtitulo-footer">
+            <h1>Cãopartilhe <span>Amor</span></h1>
+            <p>Onde o amor encontra um lar</p>
+          </div>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="social-links">
+          <a href="#" class="social-icon facebook">
+            <img src="img/facebook icon.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon instagram">
+            <img src="img/instagram icon.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon linkedin">
+            <img src="img/linkedin icon.png" alt="LinkedIn" />
+          </a>
+          <a href="#" class="social-icon linkedin">
+            <img src="img/twitter.jpg" alt="LinkedIn" />
+          </a>
+          <a href="#" class="social-icon tiktok">
+            <img src="img/wtt.png" alt="WhatsApp" />
+          </a>
+        </div>
+
+        <!-- Pagamentos -->
+        <div class="payment-methods">
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <h4>Assine nossa newsletter</h4>
+        <p>Seja o primeiro a encontrar novos bichinhos!</p>
+        <br />
+        <form action="#">
+          <input type="email" placeholder="Digite seu E-mail:" />
+          <button type="submit">Inscrever</button>
+        </form>
+        <br />
+        <p>
+          Ao se inscrever, você está aceitando nossa
+          <a href="#">Política de Privacidade</a>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-info">
+          <h4>Sobre:</h4>
+          <ul>
+            <li><a href="quem-somos.html">Home</a></li>
+            <li><a href="index.html">Serviços</a></li>
+            <li><a href="nossos-jogos.html">Adoções</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Meios de Contato:</h4>
+          <ul>
+            <li>Email: <br>caopartilheamor@gmail.com</li>
+            <li>WhatsApp: (11) 4002-8922</li>
+            <li>Central de atendimento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Cãopartilhe Amor | Desenvolvido por Maria Eduarda Moreira Pascoal |
+      Protegendo vidas, construindo lares.
+    </div>
+  </footer>
+
+</body>
+
+</html>

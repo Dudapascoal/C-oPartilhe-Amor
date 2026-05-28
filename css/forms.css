@@ -1,0 +1,338 @@
+
+/* ========================= */
+/* FORMULÁRIO ADOÇÃO */
+/* ========================= */
+
+.modal-adocao .formulario-adocao{
+  position:relative;
+
+  width:860px;
+  max-width:88%;
+
+  min-height:600px;
+
+  background:#fff;
+
+  border-radius:12px;
+
+  padding:45px 40px;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+
+  animation:modalShow 0.3s ease;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* ========================= */
+/* FECHAR */
+/* ========================= */
+
+.modal-adocao .fechar-modal{
+  position:absolute;
+  top:16px;
+  right:16px;
+
+  width:38px;
+  height:38px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#f3f3f3;
+
+  cursor:pointer;
+
+  font-size:15px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:.3s;
+}
+
+.modal-adocao .fechar-modal:hover{
+  background:#069cb3;
+  color:#fff;
+}
+
+/* ========================= */
+/* ETAPAS */
+/* ========================= */
+
+.modal-adocao .steps{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:14px;
+
+  margin-bottom:50px;
+}
+
+.modal-adocao .step{
+  width:44px;
+  height:44px;
+
+  border-radius:50%;
+
+  border:1.5px solid #cfcfcf;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#fff;
+
+  color:#8b8b8b;
+
+  font-size:15px;
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.modal-adocao .step.active{
+  background:#0097b2;
+  border-color:#0097b2;
+  color:#fff;
+}
+
+.modal-adocao .steps span{
+  width:45px;
+  height:2px;
+
+  background:#d2d2d2;
+}
+
+/* ========================= */
+/* ETAPAS FORM */
+/* ========================= */
+
+.modal-adocao .form-step{
+  display:none;
+  width:100%;
+}
+
+.modal-adocao .form-step.active{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ========================= */
+/* CONTEÚDO */
+/* ========================= */
+
+.modal-adocao .form-content{
+  width:100%;
+  max-width:540px;
+
+  text-align:center;
+
+  margin:0 auto 38px;
+}
+
+.modal-adocao .form-content h2{
+  font-size:30px;
+  line-height:1.3;
+
+  color:#2d3f59;
+
+  margin-bottom:14px;
+
+  font-weight:600;
+}
+
+.modal-adocao .form-content p{
+  font-size:15px;
+  line-height:1.7;
+
+  color:#707b88;
+}
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+
+.modal-adocao form{
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  gap:30px;
+}
+
+/* ========================= */
+/* INPUTS */
+/* ========================= */
+
+.modal-adocao .input-group{
+  width:100%;
+  max-width:520px;
+
+  margin-bottom:6px;
+}
+
+.modal-adocao .input-group input,
+.modal-adocao .input-group select{
+  width:100%;
+  height:58px;
+
+  border:none;
+  outline:none;
+
+  border-radius:12px;
+
+  padding:0 18px;
+
+  background:#f1f1f1;
+
+  font-size:15px;
+  color:#555;
+
+  transition:.3s;
+}
+
+.modal-adocao .input-group input:focus,
+.modal-adocao .input-group select:focus{
+  background:#ececec;
+
+  box-shadow:0 0 0 2px rgba(0,151,178,0.15);
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.modal-adocao .form-buttons{
+  width:100%;
+  max-width:520px;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  margin-top:18px;
+}
+
+.modal-adocao .btn-continuar,
+.modal-adocao .btn-voltar{
+  flex:1;
+
+  height:52px;
+
+  border:none;
+  border-radius:12px;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.modal-adocao .btn-continuar{
+  background:#0097b2;
+  color:#fff;
+}
+
+.modal-adocao .btn-continuar:hover{
+  background:#007f96;
+}
+
+.modal-adocao .btn-voltar{
+  background:#ececec;
+  color:#555;
+}
+
+.modal-adocao .btn-voltar:hover{
+  background:#dddddd;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media(max-width:900px){
+
+  .modal-adocao .formulario-adocao{
+    width:95%;
+
+    min-height:600px;
+
+    padding:35px 24px;
+  }
+
+  .modal-adocao .form-content h2{
+    font-size:24px;
+  }
+
+  .modal-adocao .steps{
+    gap:8px;
+  }
+
+  .modal-adocao .steps span{
+    width:22px;
+  }
+}
+
+@media(max-width:600px){
+
+  .modal-adocao .formulario-adocao{
+    min-height:auto;
+
+    padding:30px 20px;
+  }
+
+  .modal-adocao .form-content{
+    margin-bottom:28px;
+  }
+
+  .modal-adocao .form-content h2{
+    font-size:21px;
+  }
+
+  .modal-adocao .form-content p{
+    font-size:14px;
+  }
+
+  .modal-adocao form{
+    gap:22px;
+  }
+
+  .modal-adocao .input-group input,
+  .modal-adocao .input-group select{
+    height:52px;
+
+    font-size:14px;
+  }
+
+  .modal-adocao .form-buttons{
+    flex-direction:column;
+
+    gap:14px;
+  }
+
+  .modal-adocao .btn-continuar,
+  .modal-adocao .btn-voltar{
+    width:100%;
+
+    height:50px;
+  }
+
+  .modal-adocao .step{
+    width:38px;
+    height:38px;
+
+    font-size:13px;
+  }
+}
